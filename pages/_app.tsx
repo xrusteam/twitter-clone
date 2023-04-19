@@ -1,4 +1,7 @@
 import Layout from '@/components/Layout';
+import Modal from '@/components/Modal';
+import RegisterModal from '@/components/modals/RegisterModal';
+import LoginModal from '@/components/modals/LoginModal';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 
@@ -7,8 +10,12 @@ export default function App({
   pageProps,
 }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <RegisterModal />
+      <LoginModal />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
