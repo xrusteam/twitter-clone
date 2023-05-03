@@ -2,11 +2,23 @@ import { useRouter } from 'next/router';
 import { BsTwitter } from 'react-icons/bs';
 
 const SidebarLogo = () => {
-  const { push } = useRouter();
+  const router = useRouter();
+
   return (
     <div
-      onClick={() => push('/')}
-      className="rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-blue-500 cursor-pointer transition"
+      onClick={() => router.push('/')}
+      className="
+        rounded-full 
+        h-14
+        w-14
+        p-4 
+        flex 
+        items-center 
+        justify-center 
+        hover:bg-blue-300 
+        hover:bg-opacity-10 
+        cursor-pointer
+    "
     >
       <BsTwitter size={28} color="white" />
     </div>
